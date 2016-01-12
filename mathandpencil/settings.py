@@ -15,6 +15,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.static',
+    'pipeline',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,4 +62,21 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
+
+# django pipeline for css compression only
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'mathandpencil','static_local',),
+)
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+STATICFILES_STORAGE = 'apps.static.storage.GzipManifestPipelineStorage'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+    )
+
+from .pipeline_configs import *
+

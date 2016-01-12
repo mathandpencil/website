@@ -1,4 +1,4 @@
-
+{% load pipeline %}
 
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -20,8 +20,8 @@
 		<meta name="author" content="Math and Pencil" />
 		
 		{% include "misc/javascript.html" %}
-		{% include_stylesheets "common" %}
-		{% include_javascripts "common" %}
+        {% stylesheet 'global' %}
+        {% javascript 'global' %}
 		
 		<link rel="shortcut icon" href="/media/images/favicon.ico"/>
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
