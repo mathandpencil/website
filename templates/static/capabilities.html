@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title%} Math &amp; Pencil - Capabilities - Buffalo and New York City {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="capabilities" %}
+{% endblock %}
+
+{% block content %}
+	<style>
+		html {
+			border:0.25em solid #fff;
+			height:100%;
+			overflow:hidden;
+		}
+		
+		body {
+			background:url(/media/images/bkg-about-2.jpg) no-repeat center center;
+			-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+		}
+		.container.header {
+			border:0;
+		}
+		
+		
+		.container > header > span,
+		.container > header nav a {
+			color:#fff;
+		}
+	</style>
+	
+	<div class="main-content capabilities">
+		<table class="tbl_content_header">
+			<tr>
+				<td>
+					<h1 class="alt">Capabilities</h1>
+				</td>
+				
+				<td>
+					<a class="icon-eye-blocked hideshow" id="hideshow"></a>
+				</td>
+			</tr>
+		</table>
+		
+		<div id="content">
+			<ul class="lst_primary standard">
+				<li>
+					<label>Startup Business Development</label>
+					<span>We've been the development team behind 6 startups. It's always a crazy process and is what motivated us to start Math &amp; Pencil. All of our software is developed in Python (Django) and designed so it can scale. Most of our technology stacks involve the following: Django, Backbone.js, NGINX, Gunicorn, Supervisor, Underscore.js, D3.js, Celery, Redis, PostgreSQL, MongoDB, Fabric, jQuery, Ubuntu, Memcache, Munin, Statsd and a bunch more	</span>
+				</li>
+			
+				<li>
+					<label>Computer Vision Applications</label>
+					<span>Computer Vision is the process of using statistical algorithms to automatically identify or verify an object in a digital image or a video frame. Math &amp; Pencil has extensive experience with facial recognition applications - specifically, designing algorithms that are able to detect <a href="http://en.wikipedia.org/wiki/Microexpression">microexpressions</a> on a human face. Utilizing the latest feature extraction techniques, such as wavelets &amp; time series analysis, combined with sophisticated machine learning algorithms (both Bayesian and Deterministic) Math &amp; Pencil has successfully constructed algorithms which determined the emotion exhibited on a human face. Oh, we also like to compete in Kaggle competitions like this <a href="http://www.kaggle.com/c/dogs-vs-cats">one</a> because building an algorithm that can tell the difference between a cat and a dog is both fun and funny.</span>
+				</li>
+			
+				<li>
+					<label>Natural Language Processing Applications</label>
+					<span> Math &amp; Pencil has been tasked with segmenting customer comments (text) based on semantic information. We have experience building semantic analysis engines which may be used to moderate, segment or flag different types of text based comments (from blog posts to comments on a website). Custom automation tools can assist the process of online comment moderation.</span>
+				</li>
+			
+				<li>
+					<label>Large-Scale Recommendation Engines</label>
+					<span>Recommendation engines are ubiquitous in todays online experience. Popular sites such as Netflix, Amazon, and Spotify pump smart recommendations at you on an hourly basis, and for a good reason - good recommendations increase revenue. We have experience building large scale recommendations. In the past, we have been tasked with building a large scale recommendation engine off a trading/transaction based data for a large United States financial institution. We have built simple recommendations on a dual core laptop and scaled them up to large computing clusters using Apache Hadoop / Mahout and Amazon EC2</span>
+				</li>
+			
+				<li>
+					<label>Mobile Applications</label>
+					<span>iPhone / Android design and development. There isn't much we can't build in the app department. Break out your phones, tablets and other mobile devices (sometimes we feel like we're the only people still using traditional computers).</span>
+				</li>
+		
+				<li>
+					<label>Standard Websites</label>
+					<span>Basic corporate or personal websites. Minimal functionality but maximum awesome.</span>
+				</li>
+		
+				<li>
+					<label>Branding &amp; Hard-Good Design</label>
+					<span>The old school items of a business that still matter (at least we think so). General branding concepts, logos and style guides, business cards and letterhead design, trade posters and really anything else you can put ink on. While this has taken a cozy spot on the back burner to our work in the startup world, we still have a great time designing for the tangible world.</span>
+				</li>
+			</ul>
+		
+			<button class="action_redirect" type="button" data-url="{% url 'contact' %}">
+				<span class="icons icon-keyboard"></span> Contact <span class="txt">Math &amp; Pencil</span>
+			</button>
+		</div>
+	</div>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-CAPABILITIES");
+			mixpanel.track( "PV" , { "name" : "MAP-CAPABILITIES" });
+		</script>
+	{% endif %}
+	
+	
+{% endblock %}

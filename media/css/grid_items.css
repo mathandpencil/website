@@ -1,0 +1,36 @@
+.cbp-ig-grid.projects li:nth-child(2) {
+	background:url(/media/images/screenshot-employii-detail-3.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+.cbp-ig-grid.projects li:nth-child(3) {
+	background:url(/media/images/screenshot-fetcher.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+.cbp-ig-grid.projects li:nth-child(4) {
+	background:url(/media/images/screenshot-dukemail.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+.cbp-ig-grid.projects li:nth-child(5) {
+	background:url(/media/images/screenshot-rewire.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+
+
+.cbp-ig-grid.branding li:nth-child(2) {
+	background:url(/media/images/screenshot-businesscards.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+.cbp-ig-grid.branding li:nth-child(3) {
+	background:url(/media/images/screenshot-identity.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+
+
+.cbp-ig-grid.websites li:nth-child(2) {
+	background:url(/media/images/screenshot-elementcycles-detail-1.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}
+.cbp-ig-grid.websites li:nth-child(3) {
+	background:url(/media/images/screenshot-teresamisiti-detail-1.jpg) no-repeat center center;
+	-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+}

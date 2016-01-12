@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %} Math &amp; Pencil - Contact {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" %}
+{% endblock %}
+
+{% block content %}
+	<style>
+		html {
+			border:0.25em solid #fff;
+			height:100%;
+		}
+		
+		body {
+			background:url(/media/images/bkg-contact.jpg) no-repeat center center;
+			-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+		}
+		.container.header {
+			border:0;
+		}
+		
+		.container > header > span,
+		.container > header nav a {
+			color:#fff;
+		}
+		
+		form {
+			margin:1em 0 0.25em 0;
+			padding:0;
+		}
+		
+		form input {
+			margin-bottom:1.05em;
+		}
+	</style>
+	
+	<div class="main-content">
+		<table class="tbl_content_header">
+			<tr>
+				<td>
+					<h1 class="contact">Secret Password Please</h1>
+				</td>
+				
+				<td>
+					<a class="icon-eye-blocked hideshow" id="hideshow"></a>
+				</td>
+			</tr>
+		</table>
+		
+		<div id="content">
+			<form id="commentForm" method="POST" action='/login'>{% csrf_token %}
+				<input class="required" id="name" minlength="2" name="username" placeholder="Enter Username" type="text"/>
+				<input class="required" id="password" name="password" maxlength="35" placeholder="Enter Password" type="password"/>
+				
+				<button type="submit">
+					Meet the Wizard of Oz
+				</button>
+			</form>
+		</div>
+	</div>
+	
+	
+	{% include "misc/mathandpencil-js.html" %}
+{% endblock %}

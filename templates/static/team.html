@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title%} Math &amp; Pencil - Team {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="about" %}
+{% endblock %}
+
+{% block content %}
+	<style>
+		html {
+			border:0.25em solid #fff;
+			height:100%;
+			overflow:hidden;
+		}
+		
+		body {
+			background:url(/media/images/bkg-team.jpg) no-repeat center center;
+			-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+		}
+		.container.header {
+			border:0;
+		}
+		
+		p {
+			font-size:0.85em;
+		}
+		
+		.container > header > span,
+		.container > header nav a {
+			color:#fff;
+		}
+	</style>
+	
+	<div class="main-content">
+		<table class="tbl_content_header">
+			<tr>
+				<td>
+					<h1 class="alt">Founders</h1>
+				</td>
+				
+				<td>
+					<a class="icon-eye-blocked hideshow" id="hideshow"></a>
+				</td>
+			</tr>
+		</table>
+		
+		<div id="content">
+			<br/>
+			<p><span>Math &amp; Pencil</span> was started by <b>Joseph Misiti</b> and <b>Timothy Hungerford</b> in 2011. The company exists to be the architects, engineers and designers behind a plethora of digital business developments - <i>If you can dream up the idea - we can build it with you.</i></p>
+			
+			<div class="border_main"></div>
+			
+			<ul class="lst_team">
+				<li>
+					<span class="txt">the Math</span>
+					<p>Joe loves data. He spent several years developing data models for the US intelligence community – from statistical algorithms to detect lies in airport security lines to increasing the accuracy of missile guidance systems. He is the CTO for Dukemail and Fetcher and is an owner of Math &amp; Pencil. He makes everything work, adding gears and algorithms to what otherwise appears to be a magical black box.
+					</p>
+					
+					<p>Joe studied electrical engineering at University of Pittsburgh and later completed a master's in applied math at the University of Maryland. Since then, he's worked for several large defense contractors and government security agencies doing all sorts of super secret projects. Joe pairs his mathematical brilliance with a strong palette for delicious libations and mellifluous musicality (you'll find him often at many of the L.E.S watering holes as well as a plethora of musical venues like the Cake Shop and Death by Audio).
+					
+					</br>
+					</br>
+					Email:<b> joseph.misiti@mathandpencil.com</b></br>Twitter:<b>@josephmisiti</b>
+					</p>
+				</li>
+				
+				<li 
+				style="background:url(/media/images/bkg-joe.jpg) no-repeat center center;
+						-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+				">
+				</li>
+			</ul>
+			
+			<div class="border_main"></div>
+			
+			<ul class="lst_team">
+				<li>
+					<span class="txt">the Pencil</span>
+					<p>Tim can be found climbing rocks, trekking international landscapes, surfing off shore breaks, chopping wood with his father-in-law or riding his bike through rain, snow and shine... all which usually include his amazing wife, beautiful daughter, family and friends. He is the Chief Designer at Fetcher and Dukemail as well as an owner of Math &amp; Pencil.</p>
+					
+					<p>Tim studied marketing at Indiana University and has designed and built applications for medical devices, bicycle shops, farms and myriads of other online products and businesses. He resides in Western New York, splitting time between Buffalo and the small town of Medina - where he's active in the restoration of 19th century historic buildings. You'll often find him alongside Joe enjoying wine and cheap beer while listening to the sounds of Hop Along, Joe Pug, Pat Carroll, Saintseneca, Tom Waits and so on.
+					</p>
+				</li>
+				
+				<li 
+				style="
+						background:url(/media/images/bkg-tim.jpg) no-repeat center center;
+						-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+				">
+				</li>
+			</ul>
+			
+			<!-- <div class="border_main"></div>
+			
+			<ul class="tbl_team">
+				<li>
+					<p>Andrew can out tweet, gram, snap and fbook you all day long. When he isn't working 80 hours a week he's enjoying a vodka soda at the locally watering hole whilst beating people down in pool or table tennis (also known as ping-pong).</p>
+					
+					<p>Andrew studied computer engineering at the University of Michigan. We know, Indian University is a much better big 10 school, but to give credit where it is due - those northerners have a good engineering program.</p>
+				</li>
+				
+				<li 
+				style="
+						background:url(/media/images/bkg-andrew.jpg) no-repeat center center;
+						-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+				">
+				</li>
+			</ul> -->
+			
+			<div class="border_main"></div>
+			
+			<button class="action_redirect" type="button" data-url="{% url 'contact' %}">
+				<span class="icons icon-keyboard"></span> Contact <span class="txt">Math &amp; Pencil</span>
+			</button>
+		</div>
+	</div>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-TEAM");
+			mixpanel.track( "PV" , { "name" : "MAP-TEAM" });
+		</script>
+	{% endif %}
+	
+{% endblock %}

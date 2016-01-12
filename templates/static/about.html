@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title%} Math &amp; Pencil - About {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="about" %}
+{% endblock %}
+
+{% block content %}
+	<style>
+		html {
+			border:0.25em solid #fff;
+			height:100%;
+		}
+		
+		body {
+			background:url(/media/images/bkg-about-3.jpg) no-repeat center center;
+			-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+		}
+		.container.header {
+			border:0;
+		}
+		
+		
+		.container > header > span,
+		.container > header nav a {
+			color:#fff;
+		}
+	</style>
+	
+	<div class="main-content">
+		<table class="tbl_content_header">
+			<tr>
+				<td>
+					<h1>About</h1>
+				</td>
+				
+				<td>
+					<a class="icon-eye-blocked hideshow" id="hideshow"></a>
+				</td>
+			</tr>
+		</table>
+		
+		<div id="content">
+			<br/>
+			<p><span>Math &amp; Pencil</span> is a boutique software consultancy focusing on data science, machine learning and django based applications. The company takes lofty, at times seemingly unattainable, digital business concepts and turns them into digital reality. From <b>startups</b> to <b>machine learning, identity packages, marketing</b> and <b>info graphics</b>, the firm leverages its breadth of study and years of experience to create seamless web-based businesses and mobile applications. Beautiful form paired with detailed data analysis that even your 80 year old grandmother could understand the value of.</p>
+			
+			<p>We have been developing software &amp; digital businesses for over 10 years now and still love every minute of it. If you have an idea you are looking to develop, or just need a modern face to your web presence, contact us and we will be happy to provide a quote and consultation for your project  <span class="icons icon-smiley"></span></p>
+		
+			<button class="action_redirect" type="button" data-url="{% url 'contact' %}">
+				<span class="icons icon-keyboard"></span> Contact <span class="txt">Math &amp; Pencil</span>
+			</button>
+		</div>
+	</div>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-ABOUT");
+			mixpanel.track( "PV" , { "name" : "MAP-ABOUT" });
+		</script>
+	{% endif %}
+	
+{% endblock %}

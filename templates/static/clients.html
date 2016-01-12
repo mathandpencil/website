@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title%} Math &amp; Pencil - Clients - Buffalo and New York City {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="clients" %}
+{% endblock %}
+
+{% block content %}
+	<style>
+		html {
+			border:0.25em solid #fff;
+			height:100%;
+			overflow:hidden;
+		}
+		
+		body {
+			background:url(/media/images/bkg-about-2.jpg) no-repeat center center;
+			-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;
+		}
+		.container.header {
+			border:0;
+		}
+		
+		
+		.container > header > span,
+		.container > header nav a {
+			color:#fff;
+		}
+	</style>
+	
+	<div class="main-content capabilities">
+		<table class="tbl_content_header">
+			<tr>
+				<td>
+					<h1 class="alt">Clients</h1>
+				</td>
+				
+				<td>
+					<a class="icon-eye-blocked hideshow" id="hideshow"></a>
+				</td>
+			</tr>
+		</table>
+		
+		<div id="content">
+			<ul class="lst_primary standard">
+				<li>
+					<label>Fortune 500<sub>s</sub>, NPO<sub>s</sub>, Independents, Apps, Startups &amp; Consultancy</label>
+					<span>Bank of America, Bar Forecast, Baxter Healthcare, Bent's Opera House, Cinematique Consulting, Christopher Trapasso, Dukemail, Digital Free Masons, Element Cycles, Fetcher Labs, HTRS Online, In Viaggio Clothing, NHA PLLC, Nine Lines, Star Pine Creative, Rewire Group, Telegraph and Main, Toad Hill Weddings, Transcendent Endeavors, Vestorly and so on.</span>
+				</li>
+			</ul>
+		
+			<button class="action_redirect" type="button" data-url="{% url 'contact' %}">
+				<span class="icons icon-keyboard"></span> Contact <span class="txt">Math &amp; Pencil</span>
+			</button>
+		</div>
+	</div>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-CAPABILITIES");
+			mixpanel.track( "PV" , { "name" : "MAP-CAPABILITIES" });
+		</script>
+	{% endif %}
+	
+	
+{% endblock %}

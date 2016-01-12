@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title%} Math &amp; Pencil - Blog {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="blog" %}
+{% endblock %}
+
+{% block content %}
+	<div class="blog">
+		<section class="blog-entry">
+			<div class="title">Title</div>
+			
+			<div class="date">December 16, 2013</div>
+			
+			<div class="description">Making awesome.</div>
+			
+			{% if user.is_superuser %}
+			<!-- IF ADMIN LOGGED IN - SHOW DELETE POST BUTTON BELOW -->
+			<button type="submit" class="delete js-delete" data-post_id="{{post.id}}">
+				<span class="icon-remove2"></span> Delete Post
+			</button>
+			<!-- END - DELETE POST BUTTON -->
+			{% endif %}
+			
+			<div class="description top_pad">Description goes here</div>
+			
+			<ul class="cbp-ig-grid blog">
+				<li style="background:url(/media/images/bkg-about-3.jpg) no-repeat center center;
+				-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+					<a href="{{blog_post.photos.upload1}}" target="_blank">
+						<h3 class="cbp-ig-title">View Image</h3>
+						<span class="cbp-ig-category">Click to view image</span>
+					</a>
+				</li>
+			
+				<li style="background:url(/media/images/bkg-about-2.jpg) no-repeat center center;
+				-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+					<a href="{{blog_post.photos.upload1}}" target="_blank">
+						<h3 class="cbp-ig-title">View Image</h3>
+						<span class="cbp-ig-category">Click to view image</span>
+					</a>
+				</li>
+			
+				<li style="background:url(/media/images/bkg-about-1.jpg) no-repeat center center;
+				-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+					<a href="{{blog_post.photos.upload1}}" target="_blank">
+						<h3 class="cbp-ig-title">View Image</h3>
+						<span class="cbp-ig-category">Click to view image</span>
+					</a>
+				</li>
+
+				{% if blog_post.photos.upload2 %}
+				<li style="background:url({{blog_post.photos.upload2}}) no-repeat center center;
+				-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+					<a href="{{blog_post.photos.upload2}}" target="_blank">
+						<h3 class="cbp-ig-title">View Image</h3>
+						<span class="cbp-ig-category">Click to view image</span>
+					</a>
+				</li>
+				{% endif %}
+
+				{% if blog_post.photos.upload3 %}
+				<li style="background:url({{blog_post.photos.upload3}}) no-repeat center center;
+				-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+					<a href="{{blog_post.photos.upload3}}" target="_blank">
+						<h3 class="cbp-ig-title">View Image</h3>
+						<span class="cbp-ig-category">Click to view image</span>
+					</a>
+				</li>
+				{% endif %}
+
+				{% if blog_post.photos.upload4 %}
+				<li style="background:url({{blog_post.photos.upload4}}) no-repeat center center;
+				-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+					<a href="{{blog_post.photos.upload4}}" target="_blank">
+						<h3 class="cbp-ig-title">View Image</h3>
+						<span class="cbp-ig-category">Click to view image</span>
+					</a>
+				</li>
+				{% endif %}
+			</ul>
+		</section>
+		
+		<div class="border_main blog_posts"></div>
+	</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %} Math &amp; Pencil - Projects - SocialQ NYC {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="projects" secondary="project_detail" %}
+{% endblock %}
+
+{% block content %}
+	<link href='/media/css/scroll-effect.css' rel='stylesheet' type='text/css'/>
+	
+	<div class="container">
+		<div id="scroll-effect" class="scroll-effect">
+			<section class="scroll-section">
+				<article class="left">
+					<h2>SocialQ</h2>
+					<p>An online tool that leverages data from social networks to generate actionable analytics for market researchers and community managers. <br/><span>Translation = Market more accurately, make more money.</span></p>
+				
+					<button class="action_redirect" type="button" data-url="http://www.socialq.com" target="_blank">
+						<span class="icon-screen"></span> Launch Site
+					</button>
+					<br/>
+					
+					<button class="action_redirect" type="button" data-url="{% url 'projects' %}">
+						<span class="icon-arrow-left2"></span> Return to Projects
+					</button>
+				</article>
+			
+				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-1.jpg" style="
+					background:url(/media/images/screenshot-socialq-detail-1.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+		
+			<section class="scroll-section">
+				<article class="left">
+					<h2>Survey Creation &amp; Editing</h2>
+					<p>
+						Customized surveys and account folders. We basically redesigned and rebuilt a tool like Survey Monkey. The results are a clean, easy to use survey editor with customizable account management. Pretty cool, especially when combined with the site's analytics.
+					</p>
+				</article>
+				
+				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-2.jpg" style="
+					background:url(/media/images/screenshot-socialq-detail-2.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+		
+			<section class="scroll-section">
+				<article class="left">
+					<h2>Dashboard Analytics &amp; Statistical Regressions</h2>
+					<p>Compare panels to normative populations to see what makes them unique.</p>
+					
+					<p>The system can tell you what makes your Facebook audience unique from the general population or how it differs from that of your competitors, uncovering which shared interests or brand affiliations are most correlated with your audience. And by leveraging SocialQ's interest graph to find what brands and interests are unique to your audience you can compare those likes and interests to those of your competitors.</p>
+				</article>
+			
+				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-3.jpg" style="
+					background:url(/media/images/screenshot-socialq-detail-3.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+			
+			<section class="scroll-section">
+				<article class="left">
+					<h2>Content Management &amp; Data Collection</h2>
+					<p>By creating a flexible platform, the system allows you to analyze the interests of your Facebook fans, learn more about recruited survey panelists, import data from your CRM system to find unique commonalities amongst your customer segments and even optimize your content mix in social media channels.</p>
+					
+					<p>Discovering unique interests amongst your fans to recommend topics that will engage your fans as well as an optimization strategy for editorial planning has never been so easy.</p>
+					
+					<button class="action_redirect" type="button" data-url="http://www.socialq.com" target="_blank">
+						<span class="icon-screen"></span> Launch Site
+					</button>
+				</article>
+				
+				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-4.jpg" style="
+					background:url(/media/images/screenshot-socialq-detail-4.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+		</div>
+	</div>
+	
+	<script src="/media/js/vendor/scroll-effect.js"></script>
+	
+	<script>
+		new cbpScroller( document.getElementById( 'scroll-effect' ) );
+	</script>
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-WEBSITES-1");
+			mixpanel.track( "PV" , { "name" : "MAP-WEBSITES-1" });
+		</script>
+	{% endif %}
+	
+	{% include "misc/mathandpencil-js.html" %}
+{% endblock %}

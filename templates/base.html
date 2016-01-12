@@ -1,0 +1,42 @@
+{% load jammit_tags %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>
+			{% block title %}
+				Math &amp; Pencil - Web-Based Software and Business Development - Mobile Applications, Predictive Analytics, Software Development - Data science Machine learning Django Digital Design and Developmebt Consultancy - Buffalo New York and New York City
+			{% endblock %}
+		</title>
+		
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<meta name="description" content="Math and Pencil is New York City based startup business development company focusing on web-based and mobile software applications that utilize data science, machine learning, django and thoughtful digital design. We specialize in predicitive analytics, computer vision applications, recommendation engines, natual language processing applications, branding and general digital design." />
+		
+		<meta name="keywords" content="Math and Pencil, Math &amp; Pencil, Math and Pencil Buffalo and New York City, Software Development, Software Development Western New York, Software Development Buffalo, Software Development Rochester, Website Design Buffalo, Website Design New York City, Website Design Rochester New York, Analytic design, Recommendation Engines, Mobile Applications, Natural Language Processing Application Design and Development, Computer Vision Applicatoin Design and Development, Data Science, Predictive Analytics, Digital Business Development, Startup Development, Startup Software, Startups New York City" />
+		
+		<meta name="author" content="Math and Pencil" />
+		
+		{% include "misc/javascript.html" %}
+		{% include_stylesheets "common" %}
+		{% include_javascripts "common" %}
+		
+		<link rel="shortcut icon" href="/media/images/favicon.ico"/>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	
+	<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+	for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+	mixpanel.init("55ef56f5e64295bfca50e477c0f0e0e2");</script><!-- end Mixpanel -->
+	
+	</head>
+	
+	<body class="menu-push">
+		{% block header %} 
+		{% endblock %}
+		
+		{% block content %} {% endblock %}
+	</body>
+</html>

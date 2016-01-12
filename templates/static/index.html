@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block header %}
+	{% include "misc/header.html" %}
+{% endblock %}
+
+{% block content %}
+	<style>
+		.container > header nav a,
+		h2,
+		.main_statement {
+			color:rgba(0,0,0,0.4) !important;
+		}
+		.container > header nav a:hover,
+		.container > header nav a.active,
+		.main_statement:hover  {
+			color:#fff !important;
+		}
+		
+		.container > header nav a.icons:hover  {
+			background:#61c1cc;
+			color:#fff;
+		}
+	</style>
+	<link href='/media/css/landing.css' rel='stylesheet' type='text/css'/>
+	
+	<div class="hidden-txt">A boutique data science, machine learning, django based software consultancy</div>
+	
+	<div class="txt main_statement action_redirect" data-url="{% url 'projects' %}">
+		Bringing your ideas to <b>life</b>
+	</div>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-INDEX");
+			mixpanel.track( "PV" , { "name" : "MAP-INDEX" });
+		</script>
+	{% endif %}
+	
+{% endblock %}

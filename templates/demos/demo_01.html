@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<link href='/media/css/icons.css' rel='stylesheet' type='text/css'/>
+		<link href='/media/css/slide_menu_2.css' rel='stylesheet' type='text/css'/>
+		<link href='/media/css/grid-nyaa.css' rel='stylesheet' type='text/css'/>
+		<link href='/media/css/buttons-nyaa.css' rel='stylesheet' type='text/css'/>
+		
+		<script src="/media/js/vendor/jquery-1.8.3.js"></script>
+		<script src="/media/js/vendor/classie.js"></script>
+		<script src="/media/js/vendor/slide_menu.js"></script>
+		
+		<link href='//fonts.googleapis.com/css?family=Raleway:100,300,500,700,900|Viga|Arvo' rel='stylesheet' type='text/css'>
+		
+		<title>NYAA</title>
+		
+		<style>
+			html, body {
+				text-rendering: optimizeLegibility;
+				height: 100%;
+			}
+			body {
+				background:#f5f5f5;
+				margin: 0;
+				padding: 0;
+				overflow:hidden;
+			}
+			
+			.cbp-spmenu {
+				background: #fff;
+				position: fixed;
+				max-width:240px;
+				min-width:240px;
+			}
+			
+			.cbp-spmenu a {
+				border-left:6px solid transparent;
+				border-right:0;
+				color:#505050;
+				font-family:sans-serif;
+				font-size:16px;
+				font-weight:900;
+				letter-spacing:4px;
+			}
+			
+			.cbp-spmenu a:hover {
+				border-color:#df732a;
+				color:#df732a;
+			}
+			
+			.cbp-spmenu a.active {
+				border-color: #df732a;
+			}
+			
+			h1 {
+				font-family:"Raleway",sans-serif;
+				font-size:2em;
+				font-weight:700;
+				letter-spacing:0.5em;
+				margin:0px 0 4px 0;
+				padding:0px 0 4px 0;
+				text-transform:uppercase;
+			}
+			h2 {
+				font-family:"Raleway",sans-serif;
+				font-size:0.9em;
+				font-weight:500;
+				letter-spacing:2px;
+				margin:0 0 0 10px 0;
+				padding:0;
+			}
+			h3 {
+				font-family:"Arvo",sans-serif;
+				font-size:0.9em;
+				font-weight:700;
+			}
+			
+			h4 {
+				font-family:"Raleway",sans-serif;
+				font-size:0.7em;
+				font-weight:700;
+				letter-spacing:3px;
+				text-transform:uppercase;
+			}
+			
+			h5 {
+				font-family:"Raleway",sans-serif;
+				font-size:0.5em;
+				font-weight:500;
+				letter-spacing:2px;
+				text-transform:uppercase;
+			}
+			img.logo {
+				cursor:pointer;
+				height:auto;
+				position:relative;
+				width:120px;
+			}
+			
+			.cbp-spmenu div.social-media {
+				background:none;
+				cursor:pointer;
+				margin: 0;
+				padding: 12px;
+				position:absolute;
+					bottom:0;
+				text-align:left;
+			}
+			.cbp-spmenu div.social-media a {
+				border:0 !important;
+				color: rgba(0,0,0,0.4);
+				display:inline-block;
+				font-family:"icons" !important;
+				font-weight:100 !important;
+				padding:10px 16px 10px 0 !important;
+			}
+			.cbp-spmenu div.social-media span {
+				color: rgba(0,0,0,0.4);
+				display:block;
+				font-family:Helvetica, sans-serif;
+				font-size:9px;
+				font-weight:900 !important;
+				margin-top:10px;
+				text-transform:uppercase;
+			}
+			.cbp-spmenu div.social-media a:hover {
+				color:#df732a;
+			}
+			
+			table {
+				display:block;
+				margin:10px 24px;
+			}
+			
+			
+			.cbp-spmenu-left-open {
+				position: absolute;
+				top: 0px;
+				left: 0;
+				bottom: 0;
+				width: 20%;
+			}
+			.content-middle {
+				height:100%;
+				position:absolute;
+				overflow-y:auto;
+				top: 0px;
+				left: 240px;
+				bottom: 0;
+				right: 0;
+			}
+			
+			p {
+				font-family:Helvetica, sans-serif;
+				font-size:0.75em;
+				font-weight:100;
+				line-height:1.5;
+				padding-right:1.4em;
+				text-align:justify;
+			}
+		</style>
+	</head>
+	<body class="cbp-spmenu-push">
+		<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left-open">
+			<img class="logo action_redirect" data-url="/demo/01/" src="/media/images/logo-nyaa.jpg" style="margin:20px;">
+			
+			<table>
+				<tr>
+					<td class="icon-search" style="color:#8a8a8a; height:30px;"></td>
+					<td>
+						<input style="border:0; color:#8a8a8a; font-size:16px; padding:20px 0 20px 10px; outline:0;">
+					</td>
+				</tr>
+			</table>
+			
+			
+			<a href="/demo/10/">
+				Students
+			</a>
+			
+			<a href="/demo/11/">
+				Donors
+			</a>
+			
+			<a href="/demo/12/">
+				Happenings
+			</a>
+			
+			<a href="/demo/13/">
+				About
+			</a>
+			
+			<a href="/demo/14/">
+				Contact
+			</a>
+			
+			<div class="social-media">
+				<a class="icon-facebook"></a>
+				<a class="icon-twitter"></a>
+				<a class="icon-instagram"></a>
+				<a class="icon-pinterest"></a>
+				<a class="icon-vimeo"></a>
+				
+				<span>&copy; 2014 New York Acadmey of Art</span> 
+			</div>
+		</div>
+		
+		<div class="content-middle">
+			<div class="grid">
+				<ul class="cbp-ig-grid">
+					<li class="static">
+						<div>
+							<span class="icon-plus"></span>
+							<div class="txt">
+								<h4>
+									Featured
+								</h4>
+							
+								<h1>Life in a Crowd</h1>
+								<h2>A Ryan Mrozowski Retrospective - November 11, 2014</h2>
+								<p>Featuring the prolific artists work from 1999 to 2014 for one day only at the Something or Other Gallery. Mr. Mrozowski will be in attendance and giving a guided tour through his process and life as an artist.</p>
+							</div>
+							<div class="img"></div>
+						</div>
+					</li>
+				
+					<li class="static" style="border-bottom:1px solid #e0e0e0;">
+						<div>
+							<div class="txt" style="background:none; color:#5a5a5a; padding-top:20px;">
+								<h4>
+									Upcoming Events
+								</h4>
+								<ul>
+									<li>The Figure</li>
+									<li>XYZ Event</li>
+									<li>Something ABC</li>
+								</ul>
+								
+								<ul>
+									<li>A Wanderlust</li>
+									<li>In Regards to the Missing</li>
+									<li>Corners of those Cornered</li>
+								</ul>
+								
+								<ul>
+									<li>Dead Sea Stories</li>
+									<li>Disregard the Findings</li>
+									<li>Students to Donors</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					
+					<li style="padding-top:0;">
+						<div>
+							<div class="txt" style="background:#d0d0d0; color:#404040; padding-top:20px;">
+								<h4>
+									Another Event
+								</h4>
+								<h2>A Ryan Mrozowski Retrospective - November 11, 2014</h2>
+								<p>More information about event here</p>
+								<button class="button grey" type="submit">
+									Consumer Information
+								</button>
+							</div>
+						</div>
+					</li>
+					
+					<li style="padding-top:0;width:30%;">
+						<div>
+							<div class="txt" style="background:#e0e0e0; color:#404040; padding-top:20px;">
+								<h4>
+									Special Class
+								</h4>
+								<h2>The Figure</h2>
+								<p>Painting, Drawing &amp; Sculpture</p>
+								<button class="button grey" type="submit">
+									Learn More
+								</button>
+							</div>
+						</div>
+					</li>
+					
+					<li style="padding-top:0;width:20%;">
+						<div>
+							<div class="txt" style="background:none; color:#404040; padding-top:20px;">
+								<h4>
+									New Member Day
+								</h4>
+								<h2>December 2, 2014</h2>
+								<p>We will be having an open house for all new members this coming Friday. There will be faculty and students and other people along with drinks and an showing by 
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

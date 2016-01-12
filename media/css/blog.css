@@ -1,0 +1,39 @@
+/* BLOG EDIT AND ENTRIES */
+div.blog {
+	border:0.25em solid #fff;
+	border-top:0;
+}
+section.blog-entry {
+	border-bottom:1px solid #dcdcdc;
+	padding:1em;
+	width:100%;
+}
+
+section.blog-entry.no_border {
+	border:0;
+	padding-bottom:0;
+}
+
+section.blog-entry div.title {
+	font-family:"Lato", sans-serif;
+	font-size:2em;
+	font-weight:300;
+	letter-spacing:0.5em;
+	text-transform:uppercase;
+}
+
+section.blog-entry div.date {
+	font-family:"Arvo", sans-serif;
+	font-size:1.15em;
+	padding:0.75em 0 0.25em 0;
+}
+
+section.blog-entry div.description {
+	font-family:Helvetica, sans-serif;
+	font-size:0.9em;
+	padding:0.75em 0 1.5em 0;
+}
+
+section.blog-entry div.description.top_pad {
+	padding-top:0.75em;
+}

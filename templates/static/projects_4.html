@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %} Math &amp; Pencil - Projects - Duke Mail Buffalo and NYC {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="projects" secondary="project_detail" %}
+{% endblock %}
+
+{% block content %}
+	<link href='/media/css/scroll-effect.css' rel='stylesheet' type='text/css'/>
+	
+	<div class="container">
+		<div id="scroll-effect" class="scroll-effect">
+			<section class="scroll-section">
+				<article class="left">
+					<h2>Fetcher</h2>
+					<p>is a Public Relations and Event Management Tool designed for professionals. Offering solutions for thoughtful PR engagement while utilizing unparalleled machine learning to make planning, managing and tracking your eventseasy, fun and seamless</p>
+				
+					<!-- <button class="action_redirect" type="button" data-url="http://www.dukemail.com" target="_blank">
+						<span class="icon-screen"></span> Launch Site
+					</button> -->
+					<br/>
+					
+					<button class="action_redirect" type="button" data-url="{% url 'projects' %}">
+						<span class="icon-arrow-left2"></span> Return to Projects
+					</button>
+				</article>
+			
+				<figure class="right action_redirect" data-url="/media/images/screenshot-fetcher-detail-1.jpg" style="
+					background:url(/media/images/screenshot-fetcher-detail-1.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+		
+			<section class="scroll-section">
+				<article class="left">
+					<h2>Master Your Events</h2>
+					<p>Create customized events, Manage your Contacts, Create Guest List and check your guests in via your phone or tablet, Customize your seating charts, Create and send myriad of correspondences, upload and manage event photo galleries that you can share with your clients and guests, aggregate your press and track your data. Everything you need to do for your public relations can be done via Fetcher.
+					</p>
+				</article>
+				
+				<figure class="right action_redirect" data-url="/media/images/screenshot-fetcher-detail-2.jpg" style="
+					background:url(/media/images/screenshot-fetcher-detail-2.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+		</div>
+	</div>
+	
+	<script src="/media/js/vendor/scroll-effect.js"></script>
+	
+	<script>
+		new cbpScroller( document.getElementById( 'scroll-effect' ) );
+	</script>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-PROJECTS-4");
+			mixpanel.track( "PV" , { "name" : "MAP-PROJECTS-4" });
+		</script>
+	{% endif %}
+	
+{% endblock %}

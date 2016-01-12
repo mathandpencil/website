@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<link href='/media/css/icons.css' rel='stylesheet' type='text/css'/>
+		<link href='/media/css/slide_menu_2.css' rel='stylesheet' type='text/css'/>
+		<link href='/media/css/grid-nyaa.css' rel='stylesheet' type='text/css'/>
+		<link href='/media/css/buttons-nyaa.css' rel='stylesheet' type='text/css'/>
+		
+		<script src="/media/js/vendor/jquery-1.8.3.js"></script>
+		<script src="/media/js/vendor/classie.js"></script>
+		<script src="/media/js/vendor/slide_menu.js"></script>
+		
+		<link href='//fonts.googleapis.com/css?family=Raleway:100,300,500,700,900|Viga|Arvo' rel='stylesheet' type='text/css'>
+		
+		<title>NYAA</title>
+		
+		<style>
+			html, body {
+				text-rendering: optimizeLegibility;
+				height: 100%;
+			}
+			body {
+				background:#f5f5f5;
+				margin: 0;
+				padding: 0;
+				overflow:hidden;
+			}
+			
+			.cbp-spmenu {
+				background: #fff;
+				position: fixed;
+				min-width:240px;
+				max-width:240px;
+			}
+			
+			.cbp-spmenu a {
+				border-left:6px solid transparent;
+				border-right:0;
+				color:#505050;
+				font-family:sans-serif;
+				font-size:16px;
+				font-weight:900;
+				letter-spacing:4px;
+			}
+			
+			.cbp-spmenu a:hover {
+				border-color:#df732a;
+				color:#df732a;
+			}
+			
+			.cbp-spmenu a.active {
+				border-color: #df732a;
+				color:#df732a;
+				cursor:default;
+			}
+			
+			h1 {
+				font-family:"Raleway",sans-serif;
+				font-size:2em;
+				font-weight:700;
+				letter-spacing:0.5em;
+				margin:0px 0 4px 0;
+				padding:0px 0 4px 0;
+				text-transform:uppercase;
+				text-align:justify;
+			}
+			h2 {
+				font-family:"Raleway",sans-serif;
+				font-size:0.9em;
+				font-weight:500;
+				letter-spacing:2px;
+				margin:0 0 0 10px 0;
+				padding:0;
+				text-align:justify;
+			}
+			h3 {
+				font-family:"Arvo",sans-serif;
+				font-size:0.9em;
+				font-weight:700;
+			}
+			
+			h4 {
+				font-family:"Raleway",sans-serif;
+				font-size:0.7em;
+				font-weight:700;
+				letter-spacing:3px;
+				line-height:0;
+				text-transform:uppercase;
+			}
+			
+			h5 {
+				font-family:"Raleway",sans-serif;
+				font-size:0.5em;
+				font-weight:500;
+				letter-spacing:2px;
+				text-transform:uppercase;
+			}
+			img.logo {
+				cursor:pointer;
+				height:auto;
+				position:relative;
+				width:120px;
+			}
+			
+			.cbp-spmenu div.social-media {
+				background:none;
+				cursor:pointer;
+				margin: 0;
+				padding: 12px;
+				position:absolute;
+					bottom:0;
+				text-align:left;
+			}
+			.cbp-spmenu div.social-media a {
+				border:0 !important;
+				color: rgba(0,0,0,0.4);
+				display:inline-block;
+				font-family:"icons" !important;
+				font-weight:100 !important;
+				padding:10px 16px 10px 0 !important;
+			}
+			.cbp-spmenu div.social-media span {
+				color: rgba(0,0,0,0.4);
+				display:block;
+				font-family:Helvetica, sans-serif;
+				font-size:9px;
+				font-weight:900 !important;
+				margin-top:10px;
+				text-transform:uppercase;
+			}
+			.cbp-spmenu div.social-media a:hover {
+				color:#df732a;
+			}
+			
+			table {
+				display:block;
+				margin:10px 24px;
+			}
+			
+			
+			.cbp-spmenu-left-open {
+				position: absolute;
+				top: 0px;
+				left: 0;
+				bottom: 0;
+				width: 20%;
+			}
+			.content-middle {
+				height:100%;
+				position:absolute;
+				overflow-y:auto;
+				overflow-x:hidden;
+				padding:2em;
+				top: 0px;
+				left: 240px;
+				bottom: 0;
+				right: 0;
+				text-align:right;
+			}
+			
+			p {
+				font-family:Helvetica, sans-serif;
+				font-size:0.75em;
+				font-weight:100;
+				line-height:1.5;
+				padding-right:1.4em;
+				text-align:justify;
+			}
+			
+			/* SCROLL BARS */
+			::-webkit-scrollbar {
+				background: rgba(0,0,0,0.0) !important;
+				width: 2px !important;
+			}
+			::-webkit-scrollbar-track {
+				background: rgba(0,0,0,0);
+			}
+			::-webkit-scrollbar-thumb {
+				background: rgba(0,0,0,0.1);
+			}
+			::-webkit-scrollbar-thumb:window-inactive {
+				background: transparent !important;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: #202020;
+			}
+		</style>
+	</head>
+	<body class="cbp-spmenu-push">
+		<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left-open">
+			<img class="logo action_redirect" data-url="/demo/01/" src="/media/images/logo-nyaa.jpg" style="margin:20px;">
+			
+			<table>
+				<tr>
+					<td class="icon-search" style="color:#8a8a8a; height:30px;"></td>
+					<td>
+						<input style="border:0; color:#8a8a8a; font-size:16px; padding:20px 0 20px 10px; outline:0;">
+					</td>
+				</tr>
+			</table>
+			
+			
+			<a href="/demo/10/">
+				Students
+			</a>
+			
+			<a class='active' href="/demo/11/">
+				Donors
+			</a>
+			
+			<a href="/demo/12/">
+				Happenings
+			</a>
+			
+			<a href="/demo/13/">
+				About
+			</a>
+			
+			<a href="/demo/14/">
+				Contact
+			</a>
+			
+			<div class="social-media">
+				<a class="icon-facebook"></a>
+				<a class="icon-twitter"></a>
+				<a class="icon-instagram"></a>
+				<a class="icon-pinterest"></a>
+				<a class="icon-vimeo"></a>
+				
+				<span>&copy; 2014 New York Acadmey of Art</span> 
+			</div>
+		</div>
+		
+		<div class="content-middle">
+			<div style="display:table; width:100%;">
+				<div style="display:table-cell; text-align:right; vertical-align:top; margin:0; padding:0 10% 0 0;">
+					<h4>
+						Donors
+					</h4>
+				</div>
+				
+				<div style="display:table-cell; text-align:right; vertical-align:top; width:40%;">
+					<h1>Where Your Support Fosters Passion and Progress</h1>
+					<h2>Make a Gift</h2>
+					<p>For over a quarter century, the New York Academy of Art has been a vital proponent of the creation, display, and teaching of figurative art. A not-for-profit institution serving more than one hundred artists in residence and thousands of visitors annually, the Academy relies on the generosity of individuals, companies, foundations and charitable organizations.</p>
+					
+					<div style="margin:auto; text-align:right; width:100%;">
+						<button class="button" type="submit">
+							<span class="icons icon-coin"></span> Donate Now
+						</button>
+					</div>
+					
+					<h2>Become a Patron</h2>
+					<p>Making a contribution of $1,000 or more, members of the New York Academy of Art’s Patron Program are key allies in our effort to create a home for the most distinguished artists the world has to offer. Your support will help us enrich our course offerings, attract prominent teaching artists from around the globe, and allow us to provide crucial merit-based scholarships to students who exhibit financial need.</p>
+					
+					<div style="margin:auto; text-align:right; width:100%;">
+						<button class="button" type="submit">
+							<span class="icons icon-info"></span> Learn More
+						</button>
+					</div>
+					
+					<h2>Corporate Partnerships</h2>
+					<p>The artistic community is a diverse and vibrant group and we are proud to bring them all together under one roof—be it a first time art buyer combing through an exhibition, a long time enthusiast indulging in one of our master classes, or a student just arrived for their first day at the Academy.</p>
+					
+					<div style="margin:auto; text-align:right; width:100%;">
+						<button class="button" type="submit">
+							<span class="icons icon-info"></span> Learn More
+						</button>
+					</div>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function returnFalse(){
+				event.returnValue = false;
+			}
+	
+			$('.action_redirect').click(function(e){
+				window.location.href = $(e.currentTarget).data("url");
+			});
+		</script>
+	</body>
+</html>

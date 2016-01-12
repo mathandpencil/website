@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %} Math &amp; Pencil - Projects - Buffalo and New York City Software Development {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="projects" %}
+{% endblock %}
+
+{% block content %}
+	<div class="grid">
+		<ul class="cbp-ig-grid projects">
+			<li class="static">
+				<a>
+					<h3 class="cbp-ig-title static">Startups</h3>
+					<span class="cbp-ig-category static">
+						Digital Business Development
+						<br/>
+						Web-Based Software &amp; Mobile Apps
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="{% url 'projects_2' %}">
+					<h3 class="cbp-ig-title">Employii</h3>
+					<span class="cbp-ig-category">
+						Payroll &amp; Human Resources
+						<br/>
+						Site, Analytics &amp; Mobile
+					</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="{% url 'projects_4' %}">
+					<h3 class="cbp-ig-title">Fetcher</h3>
+					<span class="cbp-ig-category">
+						Public Relations
+						<br/>
+						Site, Analytics &amp; Mobile
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="{% url 'projects_3' %}">
+					<h3 class="cbp-ig-title">Duke Mail</h3>
+					<span class="cbp-ig-category">
+						Email Marketing Tool (Also, the world's best dog)
+						<br/>
+						Site, Analytics &amp; Mobile
+					</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="https://rewiregroup.com/" target="_blank">
+					<h3 class="cbp-ig-title">Rewire</h3>
+					<span class="cbp-ig-category">
+						Cat Bond Software
+						<br/>
+						Site, Analytics &amp; Mobile
+					</span>
+				</a>
+			</li>
+		</ul>
+	
+		<ul class="cbp-ig-grid branding">
+			<li class="static">
+				<a>
+					<h3 class="cbp-ig-title static">Physical</h3>
+					<span class="cbp-ig-category static">
+						Identity Development for the Modern World
+						<br/>
+						Digital &amp; Print Packages
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="{% url 'branding_1' %}">
+					<h3 class="cbp-ig-title">Business Cards</h3>
+					<span class="cbp-ig-category">
+						Something to remember you by
+						<br/>
+						Business &amp; Personal
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="{% url 'branding_2' %}">
+					<h3 class="cbp-ig-title">Identity Packages</h3>
+					<span class="cbp-ig-category">
+						The first step in growing your global empire
+						<br/>
+						Colors, Graphics &amp; Typeface
+					</span>
+				</a>
+			</li>
+		</ul>
+	
+		<ul class="cbp-ig-grid websites">
+			<li class="static">
+				<a>
+					<h3 class="cbp-ig-title static">Websites</h3>
+					<span class="cbp-ig-category static">
+						Corporate &amp; Personal
+						<br/>
+						Basic Websites &amp; Mobile
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="http://www.elementcycles.com" target="_blank">
+					<h3 class="cbp-ig-title">Element Cycles</h3>
+					<span class="cbp-ig-category">
+						Cincinnati, OH Bicycle Shop
+						<br/>
+						Site &amp; Mobile
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="http://www.teresamisiti.com" target="_blank">
+					<h3 class="cbp-ig-title">Teresa Misiti</h3>
+					<span class="cbp-ig-category">
+						Envrionmental &amp; Chemical Engineer
+						<br/>
+						Site &amp; Mobile
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-PROJECTS");
+			mixpanel.track( "PV" , { "name" : "MAP-PROJECTS" });
+		</script>
+	{% endif %}
+	
+{% endblock %}

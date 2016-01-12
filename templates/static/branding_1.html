@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title%} Math &amp; Pencil - Branding, Identity Packages and Logo Design - Buffalo and New York City {% endblock %}
+
+{% block header %}
+	{% include "misc/header.html" with primary="projects" secondary="project_detail" %}
+{% endblock %}
+
+{% block content %}
+	<link href='/media/css/scroll-effect.css' rel='stylesheet' type='text/css'/>
+	
+	<div class="container">
+		<div id="scroll-effect" class="scroll-effect">
+			<section class="scroll-section">
+				<article class="left">
+					<h2>Business Cards &amp; Other Paper Products</h2>
+					<p>We've designed a lot of business cards, letterhead, shipping materials, stamps, album artwork, t-shirts... you name it. If you need help with your tangible materials, we'd love to take some time away from these screens and help you out.</p>
+				
+					<button class="action_redirect" type="button" data-url="{% url 'contact' %}">
+						<span class="icon-keyboard"></span> Contact Us
+					</button>
+					<br/>
+					
+					<button class="action_redirect" type="button" data-url="{% url 'projects' %}">
+						<span class="icon-arrow-left2"></span> Return to Projects
+					</button>
+				</article>
+			
+				<figure class="right action_redirect" data-url="/media/images/screenshot-businesscards-2.jpg" style="
+					background:url(/media/images/screenshot-businesscards-2.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				</figure>
+			</section>
+		</div>
+	</div>
+	
+	<script src="/media/js/vendor/scroll-effect.js"></script>
+	
+	<script>
+		new cbpScroller( document.getElementById( 'scroll-effect' ) );
+	</script>
+	
+	{% include "misc/mathandpencil-js.html" %}
+	
+	{% if not DEBUG %}
+		<script type="text/javascript">
+			mixpanel.track("MAP-BRANDING-1");
+			mixpanel.track( "PV" , { "name" : "MAP-BRANDING-1" });
+		</script>
+	{% endif %}
+	
+{% endblock %}

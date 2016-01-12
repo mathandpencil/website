@@ -1,0 +1,51 @@
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){ 
+
+		JMM.Uploader2 = new qq.FileUploader( {
+
+			action: "/uploads",
+
+
+			button_name : '<button class="upload_image"><span class="icon-upload"></span> Upload Image - 2</button>',  
+
+			element	: $('#js-upload-2')[0],
+
+		    multiple	: true,
+
+			allowedExtensions : ["png","jpeg","jpg"],
+
+			onSubmit : function(id, fileName, loaded, total) {
+				NProgress.set(0.25);
+			},
+
+			onProgress: function(id, fileName, loaded, total){
+				NProgress.set(0.75);
+			},
+			
+			onCancel: function(id, fileName){
+				NProgress.done(true);
+			},
+
+		    onComplete	: function( id, fileName, responseJSON ) {
+				NProgress.done(true);
+				window.location = responseJSON.next_url;
+		    },
+
+			showMessage	: function(message){ 
+				NProgress.done(true);
+				alert(message); 
+			},
+
+		    onAllComplete	: function( uploads ) {
+				NProgress.done(true);
+		    },
+		    params: {
+		      'csrf_token'	: $('input[name=csrfmiddlewaretoken]').val(),
+		      'csrf_name'	: 'csrfmiddlewaretoken',
+		      'csrf_xname'	: 'X-CSRFToken',
+			  'upload-type'	: 'upload2',
+			  'blog_id'		: '{{blog_id}}'
+		    },
+		});
+	});
+</script>
