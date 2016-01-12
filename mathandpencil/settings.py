@@ -81,3 +81,7 @@ STATICFILES_FINDERS = (
 
 from .pipeline_configs import *
 
+try:
+    from local_settings import *
+except ImportError:
+    pass
