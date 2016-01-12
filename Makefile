@@ -1,5 +1,5 @@
 install:
-	pip install -r requiremnents/production.txt
+	pip install -r requirements/production.txt
 	
 test:
 	python manage.py test

@@ -4,8 +4,6 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = patterns('',
-	(r'^blog/', 			include('apps.blog.urls')),
-	(r'^uploads', 			include('apps.uploads.urls')),
 	
 	url(r'^$', 								'apps.static.views.index',			name='index'),
 	url(r'^about$', 						'apps.static.views.about',			name='about'),
@@ -25,9 +23,7 @@ urlpatterns = patterns('',
 	
 	url(r'^branding/business-cards$', 		'apps.static.views.branding_1',		name='branding_1'),
 	url(r'^branding/identity-packages$',	'apps.static.views.branding_2',		name='branding_2'),
-	
-	(r'^demo/',								include('apps.demo.urls')),
-)
+	)
 
 if settings.DEBUG:
     urlpatterns += patterns('',
