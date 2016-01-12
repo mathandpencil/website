@@ -3,25 +3,25 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 def index(request):
-	return render(request, 'static/index.html', {})
+	return render(request, 'core/index.html', {})
 	
 def about(request):
-	return render(request, 'static/about.html', {})
+	return render(request, 'core/about.html', {})
 	
 def branding_1(request):
-	return render(request, 'static/branding_1.html', {})
+	return render(request, 'core/branding_1.html', {})
 	
 def branding_2(request):
-	return render(request, 'static/branding_2.html', {})
+	return render(request, 'core/branding_2.html', {})
 	
 def branding_3(request):
-	return render(request, 'static/branding_3.html', {})
+	return render(request, 'core/branding_3.html', {})
 	
 def capabilities(request):
-	return render(request, 'static/capabilities.html', {})
+	return render(request, 'core/capabilities.html', {})
 	
 def clients(request):
-	return render(request, 'static/clients.html', {})
+	return render(request, 'core/clients.html', {})
 	
 def contact(request):
 	
@@ -40,34 +40,34 @@ def contact(request):
 		
 		print('sent ...')
 	
-	return render(request, 'static/contact.html', {})
+	return render(request, 'core/contact.html', {})
 	
 def projects(request):
-	return render(request, 'static/projects.html', {})
+	return render(request, 'core/projects.html', {})
 	
 def projects_1(request):
-	return render(request, 'static/projects_1.html', {})
+	return render(request, 'core/projects_1.html', {})
 	
 def projects_2(request):
-	return render(request, 'static/projects_2.html', {})
+	return render(request, 'core/projects_2.html', {})
 	
 def projects_3(request):
-	return render(request, 'static/projects_3.html', {})
+	return render(request, 'core/projects_3.html', {})
 	
 def projects_4(request):
-	return render(request, 'static/projects_4.html', {})
+	return render(request, 'core/projects_4.html', {})
 	
 def team(request):
-	return render(request, 'static/team.html', {})
+	return render(request, 'core/team.html', {})
 	
 def test(request):
-	return render(request, 'static/test.html', {})
+	return render(request, 'core/test.html', {})
 	
 def websites_1(request):
-	return render(request, 'static/websites_1.html', {})
+	return render(request, 'core/websites_1.html', {})
 	
 def websites_2(request):
-	return render(request, 'static/websites_2.html', {})
+	return render(request, 'core/websites_2.html', {})
 	
 def websites_3(request):
-	return render(request, 'static/websites_3.html', {})
+	return render(request, 'core/websites_3.html', {})

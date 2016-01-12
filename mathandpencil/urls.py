@@ -5,30 +5,26 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = patterns('',
 	
-	url(r'^$', 								'apps.static.views.index',			name='index'),
-	url(r'^about$', 						'apps.static.views.about',			name='about'),
-	url(r'^capabilities$',				 	'apps.static.views.capabilities',	name='capabilities'),
-	url(r'^clients$',				 		'apps.static.views.clients',		name='clients'),
-	url(r'^contact$', 						'apps.static.views.contact',		name='contact'),
-	url(r'^projects$', 						'apps.static.views.projects',		name='projects'),
-	url(r'^team$', 							'apps.static.views.team',			name='team'),
-	url(r'^test$', 							'apps.static.views.test',			name='test'),
+	url(r'^$', 								'apps.core.views.index',			name='index'),
+	url(r'^about$', 						'apps.core.views.about',			name='about'),
+	url(r'^capabilities$',				 	'apps.core.views.capabilities',	name='capabilities'),
+	url(r'^clients$',				 		'apps.core.views.clients',		name='clients'),
+	url(r'^contact$', 						'apps.core.views.contact',		name='contact'),
+	url(r'^projects$', 						'apps.core.views.projects',		name='projects'),
+	url(r'^team$', 							'apps.core.views.team',			name='team'),
+	url(r'^test$', 							'apps.core.views.test',			name='test'),
 	
-	url(r'^projects/fetcher$', 				'apps.static.views.projects_4',		name='projects_4'),
-	url(r'^projects/dukemail$', 			'apps.static.views.projects_3',		name='projects_3'),
-	url(r'^projects/employii$', 			'apps.static.views.projects_2',		name='projects_2'),
-	url(r'^projects/socialq$', 				'apps.static.views.projects_1',		name='projects_1'),
+	url(r'^projects/fetcher$', 				'apps.core.views.projects_4',		name='projects_4'),
+	url(r'^projects/dukemail$', 			'apps.core.views.projects_3',		name='projects_3'),
+	url(r'^projects/employii$', 			'apps.core.views.projects_2',		name='projects_2'),
+	url(r'^projects/socialq$', 				'apps.core.views.projects_1',		name='projects_1'),
 	
-	url(r'^branding/business-cards$', 		'apps.static.views.branding_1',		name='branding_1'),
-	url(r'^branding/identity-packages$',	'apps.static.views.branding_2',		name='branding_2'),
+	url(r'^branding/business-cards$', 		'apps.core.views.branding_1',		name='branding_1'),
+	url(r'^branding/identity-packages$',	'apps.core.views.branding_2',		name='branding_2'),
 	)
 
 if settings.DEBUG:
     urlpatterns += patterns('',
-        (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT}),
-    )
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+        (r'^core/(?P<path>.*)$', 'django.views.static.serve',
             {'document_root': settings.STATIC_ROOT}),
     )

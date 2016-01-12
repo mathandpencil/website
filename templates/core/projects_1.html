@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-	<link href='/media/css/scroll-effect.css' rel='stylesheet' type='text/css'/>
+	<link href='/static/css/scroll-effect.css' rel='stylesheet' type='text/css'/>
 	
 	<div class="container">
 		<div id="scroll-effect" class="scroll-effect">
@@ -26,8 +26,8 @@
 					</button>
 				</article>
 			
-				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-1.jpg" style="
-					background:url(/media/images/screenshot-socialq-detail-1.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				<figure class="right action_redirect" data-url="/static/images/screenshot-socialq-detail-1.jpg" style="
+					background:url(/static/images/screenshot-socialq-detail-1.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
 				</figure>
 			</section>
 		
@@ -39,8 +39,8 @@
 					</p>
 				</article>
 				
-				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-2.jpg" style="
-					background:url(/media/images/screenshot-socialq-detail-2.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				<figure class="right action_redirect" data-url="/static/images/screenshot-socialq-detail-2.jpg" style="
+					background:url(/static/images/screenshot-socialq-detail-2.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
 				</figure>
 			</section>
 		
@@ -52,8 +52,8 @@
 					<p>The system can tell you what makes your Facebook audience unique from the general population or how it differs from that of your competitors, uncovering which shared interests or brand affiliations are most correlated with your audience. And by leveraging SocialQ's interest graph to find what brands and interests are unique to your audience you can compare those likes and interests to those of your competitors.</p>
 				</article>
 			
-				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-3.jpg" style="
-					background:url(/media/images/screenshot-socialq-detail-3.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				<figure class="right action_redirect" data-url="/static/images/screenshot-socialq-detail-3.jpg" style="
+					background:url(/static/images/screenshot-socialq-detail-3.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
 				</figure>
 			</section>
 			
@@ -69,25 +69,26 @@
 					</button>
 				</article>
 				
-				<figure class="right action_redirect" data-url="/media/images/screenshot-socialq-detail-4.jpg" style="
-					background:url(/media/images/screenshot-socialq-detail-4.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
+				<figure class="right action_redirect" data-url="/static/images/screenshot-socialq-detail-4.jpg" style="
+					background:url(/static/images/screenshot-socialq-detail-4.jpg) no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover;background-size:cover;">
 				</figure>
 			</section>
 		</div>
 	</div>
 	
-	<script src="/media/js/vendor/scroll-effect.js"></script>
+	<script src="/static/js/vendor/scroll-effect.js"></script>
 	
 	<script>
 		new cbpScroller( document.getElementById( 'scroll-effect' ) );
 	</script>
 	
+	{% include "misc/mathandpencil-js.html" %}
+	
 	{% if not DEBUG %}
 		<script type="text/javascript">
-			mixpanel.track("MAP-WEBSITES-1");
-			mixpanel.track( "PV" , { "name" : "MAP-WEBSITES-1" });
+			mixpanel.track("MAP-PROJECTS-1");
+			mixpanel.track( "PV" , { "name" : "MAP-PROJECTS-1" });
 		</script>
 	{% endif %}
 	
-	{% include "misc/mathandpencil-js.html" %}
 {% endblock %}

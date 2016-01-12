@@ -14,7 +14,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.static',
+    'apps.core',
     'pipeline',
 )
 
@@ -72,7 +72,7 @@ STATICFILES_DIRS = (
 )
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
 PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
-STATICFILES_STORAGE = 'apps.static.storage.GzipManifestPipelineStorage'
+STATICFILES_STORAGE = 'apps.core.storage.GzipManifestPipelineStorage'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
