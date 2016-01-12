@@ -4,5 +4,5 @@ install:
 test:
 	python manage.py test
 	
-static:
+assets:
 	python manage.py collectstatic --noi

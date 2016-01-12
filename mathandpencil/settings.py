@@ -70,6 +70,7 @@ STATIC_ROOT = 'static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'mathandpencil','static_local',),
 )
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
 PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
 STATICFILES_STORAGE = 'apps.static.storage.GzipManifestPipelineStorage'
 STATICFILES_FINDERS = (

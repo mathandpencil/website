@@ -79,7 +79,7 @@
 }
 
 .cbp-ig-grid li div div.img {
-	background:url(/media/images/nyaa-example.jpg) no-repeat center center;
+	background:url(/static/images/nyaa-example.jpg) no-repeat center center;
 	
 	-webkit-background-size:	cover;
 	-moz-background-size:		cover;

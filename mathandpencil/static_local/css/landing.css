@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	background:url(/media/images/mathandpencil-logo.png) no-repeat center center #61c1cc;
+	background:url(/static/images/mathandpencil-logo.png) no-repeat center center #61c1cc;
 	background-size:50%;
 }
 
