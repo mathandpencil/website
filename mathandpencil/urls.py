@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     url(r'^branding/business-cards$',       'apps.core.views.branding_1',       name='branding_1'),
     url(r'^branding/identity-packages$',    'apps.core.views.branding_2',       name='branding_2'),
     
-    url(r'^.well-known/acme-challenge/AVqk3G4JU_YvsxXMvfZuBPzT9YHLVZoPQr2JiK3h3gQ', 'apps.core.views.lets_crypt_verification')
+    url(r'^.well-known/acme-challenge/vWmrv5sG70rIXk4bHs_oANkODrlkJI81Sdq9_DzkHc4', 'apps.core.views.lets_crypt_verification')
     
     )
 
