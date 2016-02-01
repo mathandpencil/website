@@ -7,6 +7,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+EMAIL_USE_TLS		= True
+EMAIL_HOST			= 'smtp.mailgun.org'
+EMAIL_PORT			= 587
+EMAIL_HOST_USER		= 'postmaster@mathandpencil.com'
+EMAIL_HOST_PASSWORD = '7clruojsuyx6'
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
