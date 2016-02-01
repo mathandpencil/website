@@ -36,8 +36,8 @@ def contact(request):
         html += "<p> %s </p>" % request.REQUEST.get("comment")
         message = EmailMultiAlternatives("Math & Pencil Request Form", 
                                          html, 
-                                         "noreply@mathandpencil.co,",
-                                         to=settings.TO_EMAIL_LIST,
+                                         "noreply@mathandpencil.com,",
+                                         to=['joseph.misiti@gmail.com'],
                                          bcc=[])
         message.attach_alternative(html , 'text/html')      
         message.send()
