@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import EmailMultiAlternatives 
 from django.template.loader import render_to_string
-
+from django.conf import settings
 
 def lets_crypt_verification(request):
     return render(request, 'core/https.html', {})
